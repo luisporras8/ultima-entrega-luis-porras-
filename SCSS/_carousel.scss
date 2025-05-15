@@ -1,0 +1,27 @@
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel {
+  display: flex;
+  width: 400%;
+  animation: slide 16s infinite;
+}
+
+.carousel img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0%, 25% { transform: translateX(0%); }
+  30%, 50% { transform: translateX(-100%); }
+  55%, 75% { transform: translateX(-200%); }
+  80%, 100% { transform: translateX(-300%); }
+}

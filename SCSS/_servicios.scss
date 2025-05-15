@@ -1,0 +1,10 @@
+
+.servicio-box {
+  background-color: $color-fondo;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $sombra;
+  }
+}

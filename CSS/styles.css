@@ -1,0 +1,341 @@
+/* ========================== */
+/* ESTILOS GLOBALES DEL SITIO */
+/* ========================== */
+
+/* Reglas globales para todos los elementos */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo del cuerpo principal de la página */
+body {
+  background: #161815;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+/* Estilo de la barra de navegación fija */
+.navbarMstyles {
+  display: flex;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+}
+
+/* Espaciado de las secciones */
+.section-padding {
+  padding: 70px 0;
+}
+
+/* Estilo de los elementos del carrusel */
+.carousel-item {
+  height: 80vh;
+  min-height: 300px;
+  margin-top: 10px;
+}
+
+/* Estilo de las leyendas dentro del carrusel */
+.carousel-caption {
+  bottom: 200px;
+
+  h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+  }
+
+  p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+  }
+}
+
+/* Fondo oscuro para el carrusel */
+.carousel-inner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 30, 82, 0.327);
+  margin-top: 10px;
+}
+
+/* Estilos de los enlaces dentro de la barra de navegación */
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+}
+
+/* Estilo de la marca dentro de la barra de navegación */
+.navbar-dark .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+  color: #000;
+}
+
+/* Clase que ajusta la altura al 100% de la ventana */
+.w-100 {
+  height: 100vh;
+}
+
+/* Estilo para el botón de la barra de navegación en dispositivos móviles */
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+/* Estilo de las tarjetas dentro de la sección de servicios */
+.services .card-body {
+  font-size: 50px;
+}
+
+/* Estilo de las tarjetas dentro de la sección de equipo */
+.team .card-body {
+  font-size: 20px;
+}
+
+/* ========================== */
+/* CARRUSEL DE IMÁGENES EN INDEX */
+/* ========================== */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  animation: slide 16s infinite;
+}
+
+.carousel img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+/* ========================= */
+/* RESEÑAS ESTILO POST-IT */
+/* ========================= */
+.custom-review {
+  background: #fdfdbd;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+  border: 1px solid #e1df9f;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position: relative;
+}
+
+.custom-review::before {
+  content: "✍";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.custom-review img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* SECCIÓN DE SERVICIOS */
+/* ========================= */
+.servicio-box {
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+.servicio-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================== */
+/* MEDIA QUERIES */
+/* ========================== */
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .carousel-item {
+    height: 70vh;
+  }
+  .w-100 {
+    height: 70vh;
+  }
+  .carousel-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  .about-text {
+    padding-top: 50px;
+  }
+  .card {
+    margin-bottom: 30px;
+  }
+  .section-padding {
+    padding: 50px 0;
+  }
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Botón volver arriba */
+.volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+
+
+/* Asegurar contraste y visibilidad del formulario de contacto */
+main, section, .container, form, label, input, textarea, h2, p {
+  color: #ffffff !important;
+}
+
+form button[type="submit"] {
+  height: auto;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0a58ca;
+}
+
+/* Colores claros globales para fondo oscuro */
+body, main, section, .container, h1, h2, h3, h4, h5, h6, p, a, li, label, input, textarea, button {
+  color: #ffffff !important;
+}
+
+/* Fondo base */
+body {
+  background-color: #121212 !important;
+}
+
+/* Asegurar inputs visibles sobre fondo oscuro */
+input, textarea {
+  background-color: #ffffff;
+  color: #000000 !important;
+}
+
+/* Enlaces activos y normales */
+a.nav-link {
+  color: #ffffff !important;
+}
+a.nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* Asegurar que el footer siempre quede al fondo si hay poco contenido */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Ajustar contenido de las cards para que no estén vacías */
+.card-body {
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.card .card-title, .card .card-text {
+  color: #000000 !important;
+}
